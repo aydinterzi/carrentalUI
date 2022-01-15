@@ -17,10 +17,10 @@ export class CarService {
   }
 
   getCarsByBrand(id:number):Observable<ListResponseModel<Car>>{
-    return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"getcarsbybrand");
+    return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"getcarsbybrand?id="+id);
   }
 
   getCarsByColor(id:number):Observable<ListResponseModel<Car>>{
-    return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"getcarsbycolor");
+    return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"getcarsbycolor?id="+id);
   }
 }
